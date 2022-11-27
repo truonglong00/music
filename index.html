@@ -2,18 +2,45 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>
+    Audio autoplay property
+  </title>
 </head>
 
-<body>
-    <h1>Truong Tieu Long fix lan 1</h1>
-    <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-<audio autoplay>
-<source src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3" type="audio/mp3">
-</audio>
-<script src="script.js"></script>
+<body style="text-align: center">
+
+  <h1 style="color: green">
+    GeeksforGeeks
+  </h1>
+  <h2 style="font-family: Impact">
+    Audio autoplay Property
+  </h2>
+  <br>
+
+  <audio id="Test_Audio" controls autoplay>
+    <source src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3" type="audio/ogg">
+    <source src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3" type="audio/mpeg">
+  </audio>
+
+  <p>To know whether autoplay is enabled or not,
+    double click the "Return Autoplay Status" button.
+  </p>
+  <br>
+
+  <button ondblclick="My_Audio()">
+    Return Autoplay Status
+  </button>
+
+  <p id="test"></p>
+
+  <script>
+    function My_Audio() {
+      var a =
+        document.getElementById("Test_Audio").autoplay;
+      document.getElementById("test").innerHTML = a;
+    }
+  </script>
+
 </body>
+
 </html>
