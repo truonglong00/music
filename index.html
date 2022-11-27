@@ -5,11 +5,13 @@
   <title>
     Audio autoplay property
   </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-  <audio controls autoplay muted loop src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3" autoplay=""></audio>
-  <script>
-  </script>
+    <h1>Truong Tieu Long</h1>
+    <audio id="nhac" controls loop src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
+    <script>
+        window.onload = ()=>{document.querySelector('#nhac').play();}
+    </script>
 </body>
 </html>
