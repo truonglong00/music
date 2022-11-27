@@ -14,7 +14,7 @@
     <p>Chạm vào bất kì để nghe nhạc</p>
     <audio id="nhac" hidden controls loop muted src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
     <script>
-        window.onmousedown = ()=>{
+        window.TouchEvent = ()=>{
             document.getElementById('nhac').muted = false;
             document.querySelector('#nhac').play();
     }
