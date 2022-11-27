@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        window.addEventListener("DOMContentLoaded", event => {
-  const audio = document.querySelector("audio");
-  audio.volume = 0.2;
-  audio.play();
-});
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <audio src="khongcanphaihuadauem.mp3"></audio>
+    <audio autoplay loop>
+        <source src="khongcanphaihuadauem.mp3" type="audio/ogg">
+        <embed src="khongcanphaihuadauem.mp3" autostart="true" loop="true" hidden="true"> 
+      </audio>
 </body>
 </html>
