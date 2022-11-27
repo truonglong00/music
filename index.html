@@ -8,10 +8,13 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <h1>Truong Tieu Long</h1>
-    <audio id="nhac" controls loop muted src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
+    <div>
+        <h1>Truong Tieu Long</h1><br>
+    </div>
+    <p>Chạm vào bất kì để nghe nhạc</p>
+    <audio id="nhac" hidden controls loop muted src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
     <script>
-        window.onload = ()=>{
+        window.onmousedown = ()=>{
             document.getElementById('nhac').muted = false;
             document.querySelector('#nhac').play();
     }
