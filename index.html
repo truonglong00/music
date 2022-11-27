@@ -9,9 +9,12 @@
 </head>
 <body>
     <h1>Truong Tieu Long</h1>
-    <audio id="nhac" controls loop src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
+    <audio id="nhac" controls loop muted src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
     <script>
-        window.onload = ()=>{document.querySelector('#nhac').play();}
+        window.onload = ()=>{
+            document.getElementById('nhac').muted = false;
+            document.querySelector('#nhac').play();
+    }
     </script>
 </body>
 </html>
