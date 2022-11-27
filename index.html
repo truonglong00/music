@@ -7,14 +7,15 @@
   </title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body ontouchend="playLack()" onmouseleave="playLack()">
     <div>
-        <h1>Truong Tieu Long</h1><br>
+        <h1>Truong Tieu Long</h1>
     </div>
-    <p>Chạm vào bất kì để nghe nhạc</p>
+    <br>
+    <i>Chạm vào bất kì để nghe nhạc</i>
     <audio id="nhac" hidden controls loop muted src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
     <script>
-        window.TouchEvent = ()=>{
+        function playLack(){
             document.getElementById('nhac').muted = false;
             document.querySelector('#nhac').play();
     }
