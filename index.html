@@ -5,20 +5,29 @@
   <title>
     Audio autoplay property
   </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body ontouchend="playLack()" onmouseleave="playLack()">
-    <div>
-        <h1>Truong Tieu Long</h1>
-    </div>
-    <br>
-    <i>Chạm vào bất kì để nghe nhạc</i>
     <audio id="nhac" hidden controls loop muted src="https://github.com/truonglong00/music/raw/main/music/khongcanphaihuadauem.mp3"></audio>
-    <script>
-        function playLack(){
-            document.getElementById('nhac').muted = false;
-            document.querySelector('#nhac').play();
-    }
-    </script>
+    <div class="container">
+      <div class="row">
+        <video id="myVideo" src="https://designsupply-web.com/samplecontent/vender/codepen/20181014.mp4" loop muted autoplay>
+        </video>
+        <div class="typingText"></div>
+      </div>
+      <div class="row">
+        <h1>Truong Tieu Long</h1>
+      </div>
+      <div class="row">
+        <i>Chạm vào bất kì để nghe nhạc</i>
+        </div>
+      <div class="row"></div>
+      <div class="typewriter">
+        
+      </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

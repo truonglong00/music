@@ -1,47 +1,103 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  font-family: 'Times New Roman', Times, serif !important;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 576px) { 
   body {
-    min-height: 100vh;
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 10em;
   }
-  blockquote {
-    font-size: 3rem;
   }
-  cite {
-    display: block;
-    text-align: right;
-    font-family: Verdana, Arial, sans-serif;
-    margin-top: 1rem;
-    font-size: .9rem;
-    color: #aaa;
-    font-style: normal;
+@media (min-width: 768px) {
+  body {
+    font-size: 2em;
   }
-  blockquote q {
-    font-family: Georgia, serif;
-    font-style: italic;
-    letter-spacing: .1rem;
+  #myVideo {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
   }
-  blockquote q span { 
-    will-change: opacity, filter;
-    opacity: 0;
-    filter: blur(0px);
   }
-  q {
-    quotes: "“" "”" "‘" "’";
+
+blockquote {
+  font-size: 3rem;
+}
+cite {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  color: #aaa;
+  font-style: normal;
+}
+blockquote q {
+  font-family: Georgia, serif;
+  font-style: italic;
+  letter-spacing: .1rem;
+}
+blockquote q span { 
+  will-change: opacity, filter;
+  opacity: 0;
+  filter: blur(0px);
+}
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q:before {
+    content: open-quote;
+    margin-right: .8rem;
+}
+q:after {
+  content: close-quote;
+}
+q:before, q:after {
+  color: #ccc;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+@keyframes typing {
+  from {
+    width: 0
   }
-  q:before {
-      content: open-quote;
-      margin-right: .8rem;
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
-  q:after {
-    content: close-quote;
-  }
-  q:before, q:after {
-    color: #ccc;
-    font-size: 4rem;
-  }
+}
