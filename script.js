@@ -1,7 +1,6 @@
 function playLack(){
   document.getElementById('nhac').muted = false;
   document.querySelector('#nhac').play();
-  document.querySelector('#myVideo').play();
 }
 // /******** Typing js *********/
 var inputBox = document.querySelector('.typingText')
